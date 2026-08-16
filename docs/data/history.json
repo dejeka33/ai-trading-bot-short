@@ -1,4 +1,18 @@
 {
-  "starting_value": null,
-  "entries": []
+  "starting_value": 100000.0,
+  "entries": [
+    {
+      "date": "2026-08-16",
+      "portfolio_value": 100000.0,
+      "cash": 100000.0,
+      "buying_power": 400000.0,
+      "positions": [],
+      "market_summary": "S&P 500 (SPY) a Nasdaq-100 (QQQ) vykazují v posledních dnech stabilní až mírně rostoucí trend bez jasných signálů panici. Volatilita (VIXY) je nízká (~18.6), výnosová křivka zůstává pozitivní (T10Y2Y +0.51%), Fed sazby jsou stabilní. Portfolio je v hotovosti bez pozic. Fundamentálně neexistují přesvědčivé důvody k očekávanému poklesu trhů.",
+      "trades": [],
+      "trade_count": 0,
+      "blocked_reasons": [],
+      "spy_price": 776.3,
+      "realized_pl_cum": 0.0
+    }
+  ]
 }
