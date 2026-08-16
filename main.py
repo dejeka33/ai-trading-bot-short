@@ -22,6 +22,7 @@ from execute import execute_trades
 from report import build_report
 from history import load_history, update_history
 from fred_data import get_macro_context
+from notify import send_telegram, build_daily_summary
 
 
 def compute_realized_pl_delta(account_before, trade_results):
@@ -108,6 +109,13 @@ def main():
     )
 
     print(report_md)
+
+    # Push notifikace na telefon (volitelné - viz notify.py). Posílá se vždy
+    # account_after (aktuální stav po případných obchodech).
+    send_telegram(build_daily_summary(
+        "AI Bearish Bot", date_str, account_after, trade_results,
+        reasons if not ok else [],
+    ))
 
     # Pro GitHub Actions step summary (pěkně vidět report přímo v UI běhu)
     summary_file = os.environ.get("GITHUB_STEP_SUMMARY")

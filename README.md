@@ -60,6 +60,27 @@ bezpečná pozice HOTOVOST, ne držení ETF - viz `decision.py`.
 8. Doporučuju první běh obou workflow spustit ručně (workflow_dispatch) a
    zkontrolovat výstup, než necháš běžet automaticky.
 
+## Push notifikace na telefon (volitelné)
+
+Appka umí po každém denním běhu poslat krátké shrnutí (obchod proveden/
+neproveden/blokován) přes Telegram bota, a navíc pošle urgentní notifikaci,
+kdykoliv zasáhne automatický intradenní stop-loss. Bez nastavení appka funguje
+úplně stejně jako dřív, jen notifikace neposílá.
+
+1. V Telegramu si napiš s **@BotFather**, pošli mu `/newbot` a projdi krátký
+   dialog - na konci ti dá **token** (dlouhý řetězec). Klidně můžeš použít
+   stejného bota jako u dlouhodobého bota, jen s jiným `chat_id` není potřeba -
+   obě appky se v textu zprávy samy označí ("AI Trading Bot (dlouhodobý)" vs.
+   "AI Bearish Bot"), takže je od sebe v Telegramu poznáš.
+2. Napiš svému botovi jakoukoliv zprávu, aby věděl, komu má psát zpátky.
+3. Otevři v prohlížeči (nahraď TOKEN svým): `https://api.telegram.org/botTOKEN/getUpdates`
+   - ve výsledku najdeš `"chat":{"id": ČÍSLO, ...}` - to číslo je tvoje `chat_id`.
+4. Přidej do GitHub Secrets TOHOTO repozitáře (i když použiješ stejného bota
+   jako u dlouhodobé appky, secrets se mezi repozitáři nesdílí, musíš je
+   zadat znovu):
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
+
 ## Odhad nákladů
 
 - GitHub Actions: zdarma (stejně jako u dlouhodobého bota).
@@ -78,6 +99,7 @@ bezpečná pozice HOTOVOST, ne držení ETF - viz `decision.py`.
 - `risk_rules.py` - validace rozhodnutí proti mantinelům
 - `execute.py` - provedení obchodů
 - `intraday_check.py` - pravidlová (bez AI) stop-loss pojistka mezi denními běhy
+- `notify.py` - volitelné push notifikace přes Telegram
 - `report.py` - generování denního reportu
 - `main.py` - spojuje denní běh dohromady
 - `reports/` - sem se ukládají denní reporty a intradenní stop-loss logy

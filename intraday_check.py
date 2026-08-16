@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from data_fetch import get_clients, get_account_snapshot
 from risk_rules import load_risk_limits
 from execute import execute_trades
+from notify import send_telegram
 
 
 def find_stop_loss_breaches(account_snapshot, stop_loss_pct):
@@ -62,6 +63,11 @@ def main():
         f.write("\n".join(lines) + "\n\n")
 
     print("\n".join(lines))
+
+    # Tohle je jediná situace, kdy appka jedná úplně bez AI - proto stojí za
+    # samostatnou (urgentní) notifikaci, na rozdíl od běžné klidné kontroly
+    # "nic se neděje", která by jen zbytečně spamovala telefon 4x denně.
+    send_telegram("POZOR - automaticky spustil stop-loss:\n\n" + "\n".join(lines))
 
     summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary_file:
