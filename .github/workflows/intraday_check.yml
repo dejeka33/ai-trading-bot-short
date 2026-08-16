@@ -33,7 +33,7 @@ jobs:
           ALPACA_API_BASE_URL: ${{ secrets.ALPACA_API_BASE_URL }}
           ALPACA_PAPER: "true"
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
-        PUSH_SUBSCRIPTION_JSON: ${{ secrets.PUSH_SUBSCRIPTION_JSON }}
+          PUSH_SUBSCRIPTION_JSON: ${{ secrets.PUSH_SUBSCRIPTION_JSON }}
         run: python intraday_check.py
 
       - name: Commit intraday log (pokud se něco prodalo)
