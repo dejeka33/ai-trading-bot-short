@@ -1,0 +1,52 @@
+# Rizikové mantinely pro AI bota na inverzní ETF ("bearish" appka).
+# Toto jsou VÝCHOZÍ konzervativní hodnoty pro paper trading účet.
+# Uprav podle svých preferencí, než spustíme první ostrý běh.
+#
+# DŮLEŽITÝ ROZDÍL oproti dlouhodobému botovi: tady je VÝCHOZÍ/bezpečná pozice
+# HOTOVOST, ne držení ETF. Inverzní ETF mají tzv. decay riziko (denní
+# přepočítávání páky) - dlouhé nečinné držení bez jasného důvodu je špatný
+# nápad, na rozdíl od dlouhodobého bota, kde je "drž a čekej" v pořádku.
+
+account:
+  mode: paper                # paper | live -- NEMĚNIT na "live" bez explicitního souhlasu uživatele
+  starting_universe:
+    stocks_etfs: true
+    crypto: false             # tato appka se soustředí jen na inverzní ETF akciových indexů
+
+position_limits:
+  max_position_size_pct: 10      # max. % hodnoty portfolia v jedné pozici
+  max_single_trade_pct: 5        # max. % portfolia v jednom obchodu za den
+  max_daily_trades: 3            # nižší než u dlouhodobého bota - méně obchodování, ne víc
+  max_total_crypto_allocation_pct: 0
+
+risk_controls:
+  allow_leverage: false
+  allow_short_selling: false     # nepotřeba - inverzní ETF jsou normální BUY, ne short pozice
+  allow_options: false
+  stop_loss_pct: 5               # přísnější než u dlouhodobého bota (8%) kvůli decay riziku
+  daily_loss_circuit_breaker_pct: 4   # pokud portfolio ztratí za den víc, bot dál needbochoduje a jen reportuje
+  max_recommended_holding_days: 10    # SOFT signál pro AI do promptu (decision.py) - není tvrdě vynucen
+                                       # kódem, ale AI má dostat instrukci nedržet pozice zbytečně dlouho
+
+allowed_instruments:
+  stocks_etfs:
+    - SH      # ProShares Short S&P500 (denní -1x S&P 500)
+    - PSQ     # ProShares Short QQQ (denní -1x Nasdaq-100)
+  crypto: []
+  # Bot smí OBCHODOVAT (kupovat/prodávat) POUZE nástroje z tohoto seznamu.
+  # Rozšíření seznamu (např. o pákové 2x/3x inverzní ETF jako SDS/SQQQ) =
+  # vědomé rozhodnutí uživatele, ne AI.
+
+reference_instruments:
+  # Tyto symboly bot NESMÍ obchodovat (nejsou v allowed_instruments výše) -
+  # slouží jen jako kontext do promptu, aby AI vidělo, jak se chová podkladový
+  # index (SPY pro SH, QQQ pro PSQ) a orientační volatilita (VIXY jako proxy
+  # za VIX - Alpaca free/IEX tarif samotný index VIX nenabízí).
+  stocks_etfs:
+    - SPY
+    - QQQ
+    - VIXY
+
+reporting:
+  send_daily_report: true
+  report_channel: session_message   # zatím: zpráva do konverzace / emailu (doladíme)
