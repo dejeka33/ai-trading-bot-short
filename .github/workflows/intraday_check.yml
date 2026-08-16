@@ -1,0 +1,43 @@
+name: Intraday Stop-Loss Check
+
+on:
+  schedule:
+    # Čtyřikrát během amerického obchodního dne (9:30-16:00 ET), jen všední dny.
+    # 14:00, 16:00, 18:00, 20:00 UTC - hrubé rozestupy přes den, DST posune
+    # skutečný lokální čas o hodinu, ale pro bezpečnostní pojistku to nevadí.
+    - cron: "0 14,16,18,20 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  intraday-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run intraday stop-loss check
+        env:
+          ALPACA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY_ID }}
+          ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
+          ALPACA_API_BASE_URL: ${{ secrets.ALPACA_API_BASE_URL }}
+          ALPACA_PAPER: "true"
+        run: python intraday_check.py
+
+      - name: Commit intraday log (pokud se něco prodalo)
+        run: |
+          git config user.name "trading-bot"
+          git config user.email "trading-bot@users.noreply.github.com"
+          git add reports/
+          git diff --staged --quiet || git commit -m "Intraday stop-loss log $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git push
