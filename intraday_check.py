@@ -15,7 +15,6 @@ from datetime import datetime, timezone
 from data_fetch import get_clients, get_account_snapshot
 from risk_rules import load_risk_limits
 from execute import execute_trades
-from notify import send_telegram
 from webpush_notify import send_web_push
 
 
@@ -68,7 +67,6 @@ def main():
     # Tohle je jediná situace, kdy appka jedná úplně bez AI - proto stojí za
     # samostatnou (urgentní) notifikaci, na rozdíl od běžné klidné kontroly
     # "nic se neděje", která by jen zbytečně spamovala telefon 4x denně.
-    send_telegram("POZOR - automaticky spustil stop-loss:\n\n" + "\n".join(lines))
     symbols = ", ".join(p["symbol"] for p in breaches)
     send_web_push("AI Bearish Bot — stop-loss", f"Automaticky prodáno: {symbols}")
 

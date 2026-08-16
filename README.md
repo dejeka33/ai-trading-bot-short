@@ -60,51 +60,35 @@ bezpečná pozice HOTOVOST, ne držení ETF - viz `decision.py`.
 8. Doporučuju první běh obou workflow spustit ručně (workflow_dispatch) a
    zkontrolovat výstup, než necháš běžet automaticky.
 
-## Push notifikace na telefon (volitelné)
+## Push notifikace přímo z ikony dashboardu (volitelné)
 
-Appka umí po každém denním běhu poslat krátké shrnutí (obchod proveden/
-neproveden/blokován) přes Telegram bota, a navíc pošle urgentní notifikaci,
-kdykoliv zasáhne automatický intradenní stop-loss. Bez nastavení appka funguje
-úplně stejně jako dřív, jen notifikace neposílá.
+Appka umí po každém denním běhu poslat push notifikaci nainstalovaného
+dashboardu (PWA) na telefonu - vypadá, že jde přímo z appky, žádná další
+appka (Telegram apod.) není potřeba. Navíc pošle urgentní notifikaci,
+kdykoliv zasáhne automatický intradenní stop-loss. Bez nastavení appka
+funguje úplně stejně jako dřív, jen notifikace neposílá.
 
-1. V Telegramu si napiš s **@BotFather**, pošli mu `/newbot` a projdi krátký
-   dialog - na konci ti dá **token** (dlouhý řetězec). Klidně můžeš použít
-   stejného bota jako u dlouhodobého bota, jen s jiným `chat_id` není potřeba -
-   obě appky se v textu zprávy samy označí ("AI Trading Bot (dlouhodobý)" vs.
-   "AI Bearish Bot"), takže je od sebe v Telegramu poznáš.
-2. Napiš svému botovi jakoukoliv zprávu, aby věděl, komu má psát zpátky.
-3. Otevři v prohlížeči (nahraď TOKEN svým): `https://api.telegram.org/botTOKEN/getUpdates`
-   - ve výsledku najdeš `"chat":{"id": ČÍSLO, ...}` - to číslo je tvoje `chat_id`.
-4. Přidej do GitHub Secrets TOHOTO repozitáře (i když použiješ stejného bota
-   jako u dlouhodobé appky, secrets se mezi repozitáři nesdílí, musíš je
-   zadat znovu):
-   - `TELEGRAM_BOT_TOKEN`
-   - `TELEGRAM_CHAT_ID`
-
-### Alternativa: notifikace přímo z ikony dashboardu (Web Push)
-
-Appka umí posílat i "opravdové" push notifikace nainstalovaného dashboardu
-(PWA) na telefonu - bez Telegramu, notifikace vypadá, že jde přímo z appky.
-Je to o něco křehčí (funguje jen na jednom konkrétním telefonu/prohlížeči,
-kde appku takhle zapneš, a když se odhlášení jednou "rozbije", potřeba
-zopakovat), ale jde to bez další appky. Dá se používat spolu s Telegramem,
-nebo místo něj. U bearish bota navíc přijde jako Web Push i urgentní
-upozornění, když zasáhne automatický intradenní stop-loss.
+Obě hodnoty níže se ukládají jen jako GitHub Secrets, NIKDY jako obyčejný
+soubor v repozitáři - i když je repozitář veřejný (kvůli GitHub Pages na
+zdarma účtu typicky musí být), secrets zůstávají skryté stejně jako ostatní
+API klíče.
 
 1. Otevři si dashboard appky na telefonu (v prohlížeči, ideálně tu
    nainstalovanou verzi) a klikni na tlačítko **"Zapnout push notifikace"**
    nahoře pod nadpisem. Povol notifikace, když se o to prohlížeč zeptá.
-2. Zobrazí se text (JSON) - zkopíruj ho celý a pošli mi ho v chatu, ať ho
-   uložím do repozitáře (soubor `data/push_subscription.json` - je mimo
-   `docs/`, takže není veřejně dostupný přes GitHub Pages). POZOR: udělej
-   tohle na dashboardu TÉTO appky (ne dlouhodobé) - každá appka běží na
-   jiné adrese, takže vyžaduje vlastní přihlášení k notifikacím.
-3. Přidej do GitHub Secrets TOHOTO repozitáře `VAPID_PRIVATE_KEY` - hodnotu
-   ti dám já (je to vygenerovaný klíč, ne heslo k ničemu tvému; stejný klíč
-   jako u dlouhodobé appky, jen musí být zadaný znovu, secrets se mezi
-   repozitáři nesdílí).
+   POZOR: udělej tohle na dashboardu TÉTO appky (ne dlouhodobé) - každá
+   appka běží na jiné adrese, takže vyžaduje vlastní přihlášení.
+2. Zobrazí se text (JSON) - zkopíruj ho celý.
+3. Přidej do GitHub Secrets TOHOTO repozitáře (Settings → Secrets and
+   variables → Actions → New repository secret):
+   - `PUSH_SUBSCRIPTION_JSON` (text z kroku 2, vlož ho celý přesně jak je)
+   - `VAPID_PRIVATE_KEY` - hodnotu ti dám já (je to vygenerovaný
+     kryptografický klíč, ne heslo k ničemu tvému; stejný klíč jako
+     u dlouhodobé appky, jen musí být zadaný znovu - secrets se mezi
+     repozitáři nesdílí)
 4. Pokud by notifikace časem přestaly chodit (prohlížeč umí odhlášení
-   samo zneplatnit), stačí zopakovat kroky 1-2.
+   samo zneplatnit), stačí zopakovat kroky 1-3 (přepsat starý secret
+   novým textem).
 
 ## Odhad nákladů
 
@@ -124,7 +108,6 @@ upozornění, když zasáhne automatický intradenní stop-loss.
 - `risk_rules.py` - validace rozhodnutí proti mantinelům
 - `execute.py` - provedení obchodů
 - `intraday_check.py` - pravidlová (bez AI) stop-loss pojistka mezi denními běhy
-- `notify.py` - volitelné push notifikace přes Telegram
 - `webpush_notify.py` - volitelné push notifikace přímo do ikony dashboardu (Web Push)
 - `report.py` - generování denního reportu
 - `main.py` - spojuje denní běh dohromady
