@@ -13,6 +13,19 @@
       "blocked_reasons": [],
       "spy_price": 776.3,
       "realized_pl_cum": 0.0
+    },
+    {
+      "date": "2026-08-17",
+      "portfolio_value": 100000.0,
+      "cash": 100000.0,
+      "buying_power": 400000.0,
+      "positions": [],
+      "market_summary": "S&P 500 (SPY) a Nasdaq-100 (QQQ) vykazují stabilní až mírně vzestupný trend v posledních dnech. Volatilita (VIXY) klesla na 18,75 a pokračuje v trendu útlumu. Makroekonomické podmínky zůstávají podporné (Fed odds pro zvýšení sazeb v září se snížily na 30%), a velcí investoři (Ray Dalio) naopak zvyšují pozice v akciovém trhu. Portfolio účtu zůstává v hotovosti (100 000 USD), bez otevřených pozic.",
+      "trades": [],
+      "trade_count": 0,
+      "blocked_reasons": [],
+      "spy_price": 772.62,
+      "realized_pl_cum": 0.0
     }
   ]
 }
