@@ -66,7 +66,10 @@ def main():
         account_before, tradable_bars, reference_bars, limits, news=news, macro=macro,
     )
 
-    ok, reasons = validate_decision(decision, limits, account_before)
+    # Aktuální ceny z nezávislého zdroje (tržní data, ne to, co si spočítala AI) -
+    # appka smí obchodovat jen SH/PSQ, takže stačí ceny z tradable_bars.
+    prices = {symbol: series[-1]["c"] for symbol, series in tradable_bars.items() if series}
+    ok, reasons = validate_decision(decision, limits, account_before, prices=prices)
 
     trade_results = []
     if ok and decision.get("trades"):

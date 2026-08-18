@@ -332,7 +332,12 @@ def main():
         if decision is None:
             blocked_reasons = ["Rozhodnutí AI selhalo, den přeskočen."]
         else:
-            ok, reasons = validate_decision(decision, limits, account_snapshot)
+            # Stejná nezávislá kontrola ceny jako v živém provozu (main.py) - ať
+            # backtest odhalí stejný typ chyby (qty neodpovídá estimated_value).
+            # Appka smí obchodovat jen SH/PSQ, takže stačí ceny z tradable_bars_today.
+            prices_today = {s: close_price(all_bars, s, day_str) for s in stocks}
+            prices_today = {s: p for s, p in prices_today.items() if p is not None}
+            ok, reasons = validate_decision(decision, limits, account_snapshot, prices=prices_today)
             if ok and decision.get("trades"):
                 for t in decision["trades"]:
                     cash, res = simulate_trade(cash, positions, t, all_bars, day_str)
