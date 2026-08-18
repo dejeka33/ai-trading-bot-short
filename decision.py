@@ -77,6 +77,23 @@ to je pro tuhle appku relevantnější signál než pro dlouhodobého bota.
             "ale měl bys ho zohlednit při rozhodování, jestli pozici držet dál nebo uzavřít.\n"
         )
 
+    portfolio_value = account_snapshot.get("portfolio_value") or 0
+    pos_limits = risk_limits.get("position_limits", {})
+    max_single_trade_value = portfolio_value * (pos_limits.get("max_single_trade_pct", 0) / 100)
+    max_position_value = portfolio_value * (pos_limits.get("max_position_size_pct", 0) / 100)
+    max_daily_trades = pos_limits.get("max_daily_trades")
+    dollar_limits_note = f"""
+PŘESNÉ DOLAROVÉ LIMITY PRO DNEŠNÍ ROZHODNUTÍ (už dopočítané z aktuální hodnoty portfolia,
+abys je nemusel sám odhadovat z procent v mantinelech níže):
+- Maximální estimated_value JEDNOHO obchodu: ${max_single_trade_value:,.2f}
+- Maximální celková hodnota JEDNÉ pozice (SH nebo PSQ) po obchodu: ${max_position_value:,.2f}
+- Maximální počet obchodů za den: {max_daily_trades}
+Obchod s estimated_value nad prvním limitem bude CELÝ zamítnut (neprovede se nic, i kdyby byl
+signál správný) - systém obchod sám nezmenší. Pokud je signál k poklesu jasný, ale plná pozice
+by limit přesáhla, navrhni menší obchod, který se do limitu vejde - menší správně vypočtený
+obchod je vždy lepší než jeden zamítnutý kvůli špatné velikosti.
+"""
+
     return f"""
 Jsi obchodní asistent spravující PAPER TRADING účet (fiktivní peníze, reálná tržní data).
 Tato appka se zaměřuje na OBRANNOU/"bearish" strategii pomocí INVERZNÍCH ETF - ne na
@@ -107,6 +124,7 @@ jen jako kontext pro rozhodnutí o SH/PSQ):
 {news_section}{macro_section}
 RIZIKOVÉ MANTINELY (ZÁVAZNÉ - nesmíš je porušit):
 {json.dumps(risk_limits, indent=2, ensure_ascii=False)}
+{dollar_limits_note}
 
 Zprávy a makro kontext jsou jen doplňkové (mohou být neúplné nebo chybět) - nikdy jim
 nevěř víc než mantinelům a nepoužívej je jako jediný důvod k obchodu; kombinuj je
