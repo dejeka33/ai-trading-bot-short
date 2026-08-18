@@ -3,14 +3,14 @@
   "end": "2026-03-31",
   "summary": {
     "starting_cash": 100000.0,
-    "final_portfolio_value": 100080.66,
-    "total_return_pct": 0.08065999999999907,
+    "final_portfolio_value": 100296.5,
+    "total_return_pct": 0.29650000000001064,
     "final_benchmark_spy_value": 94721.35207984263,
     "benchmark_return_pct": -5.278647920157365,
-    "max_drawdown_pct": -0.15427698625135,
-    "total_filled_trades": 6,
+    "max_drawdown_pct": -0.3839275826467344,
+    "total_filled_trades": 4,
     "days_simulated": 22,
-    "days_fully_in_cash": 19,
+    "days_fully_in_cash": 1,
     "assumptions": [
       "Fill se simuluje za zavírací cenu daného dne (žádný spread/slippage).",
       "Simulují se jen obchodní dny akciového trhu (víkendy vynechány).",
@@ -21,7 +21,7 @@
   "entries": [
     {
       "date": "2026-03-02",
-      "market_summary": "Trh vykazuje smíšené signály po zhoršení. SPY a QQQ se po poklesu v pátek (27.2.) částečně odrážejí na začátku tohoto týdne, ale zůstávají pod současnými referencemi. VIXY se pohybuje kolem 28, což indikuje střední volatilitu. Geopolitické riziko (Iran-US) a obavy z AI/growth vytváří nejistotu, ale dnešní zprávy naznačují částečnou stabilizaci; T10Y2Y rozpětí 0,58% není inverzi signalizující, ale pozornost zaslouží. Bez aktuální pozice; hotovost plná.",
+      "market_summary": "Trh v poslední části měsíce vykázal volatilitu spojovanou se zvýšeným geopolitickým rizikem (Iran-USA konflikt). S&P 500 (SPY) se pohybuje kolem 686, Nasdaq (QQQ) kolem 608 po pádů z poloviny února. VIXY se zvýšil na 28.27, signalizující zvýšenou nejistotu. Portfolio je v hotovosti ($100k), bez otevřených pozic.",
       "trades": [],
       "blocked_reasons": [],
       "portfolio_value": 100000.0,
@@ -31,326 +31,650 @@
     },
     {
       "date": "2026-03-03",
-      "market_summary": "Trh čelí vážné geopolitické riziko: eskalace konfliktu USA-Írán vedla k poklesu S&P 500 o -1,5% a Nasdaqu o -2,2% za poslední dva dny. Volatilita (VIXY) skočila na 29,55 (historicky vysoká), ropa roste. Výnosová křivka je stále normalizovaná (T10Y2Y: 0,55%), což neukazuje na okamžité obavy z recese, ale samotný geopolitický šok vytváří medium-term risk pro akciové trhy. Portfolio je zcela v hotovosti (100k).",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 99117.0685510308
-    },
-    {
-      "date": "2026-03-04",
-      "market_summary": "S&P 500 a Nasdaq-100 vykázaly v posledních třech dnech (od 3.3.) výrazný posun vzhůru po zprávách o diplomatických rozhovorech s Íránem; QQQ vzrostl z 591.94 (low z 3.3.) na 610.58 (close 4.3.), SH/PSQ klesly. VIXY uzavřel na 28.47, což je stále elevované, ale klesl z vrcholu 32.57 (3.3.). Volatilita se mírně snižuje, sentiment je optimističtější, ale nejistota zůstává.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 99822.2481241349
-    },
-    {
-      "date": "2026-03-05",
-      "market_summary": "Trh čelí geopolitickému riziku kvůli eskalaci konfliktu v Iránu. Ceny ropy dosáhly $80/barel, což zvýšilo inflační obavy. Obě referenční indexy (SPY, QQQ) kolísají, ale poslední dva dny (4.3, 5.3) zaznamenaly mírný pokles. VIXY (volatilita) je zvednutá na 30,36 — signál zvýšené nejistoty. Účet je v hotovosti bez pozic (0 dolarů v SH/PSQ), připraven na obranný pohyb.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 99279.52210971077
-    },
-    {
-      "date": "2026-03-06",
-      "market_summary": "Trh prudce padá po slabé zprávě o zaměstnanosti (payroll pokles o 92k), která rozpoutala obavy ze stagflace. SPY se v posledních dnech vrátil na 672.44 (-12 bodů od vrcholu), QQQ padá na 599.84 (-18 bodů), volatilita (VIXY) vzrostla na 34.51 (+34% za 2 dny) a blíží se \"fear zone\" nad 30. Výnosová křivka zůstává pozitivní (rozpětí 10Y-2Y 0.59%), ale makro sentiment je jasně negativní. Účet je 100% v hotovosti bez pozic.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 97973.33721862023
-    },
-    {
-      "date": "2026-03-09",
-      "market_summary": "Trh se nachází v turbulentní situaci: geopolitické napětí s Íránem tlačí ceny ropy nahoru, volatilita (VIXY) prudce stoupla na 31,18, S&P 500 se drží těsně nad 100denním průměrem, ale sentiment zůstává nejistý. Výnosová křivka je normalizovaná (T10Y2Y +0,56%), což neindikuje recesi. Inverzní ETF SH a PSQ zatím zůstávají v držení v hotovosti; bez jasného a přesvědčivého signálu pro vstup do pozice se obchodování neplánuje.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 98827.12901580824
-    },
-    {
-      "date": "2026-03-10",
-      "market_summary": "Trh v poslední době vykazuje velmi vysokou volatilitu kolem geopolitických rizik (Iran, Strait of Hormuz). SPY se vypořádal se sjezdem (uzavřel 2.3% pod 100denním MA), QQQ je blízko historických maxim. VIXY skočil z ~28 na 32.7, což signalizuje rozsáhlý strach, ale trh se v poslední séanci (10.3.) vrátil do rally na Trumpovy pozitivní signály. Fundamentálně: výnosová křivka je mírně normální (T10Y2Y +0.58%), Fed sazba v 3.64%. Klíčový signál: vysoká volatilita + geopolitické nejistoty se sice zmírnily přehlášením, ale trh si vydržel vysoké VIXY a SPY je stále pod průměrem – to znamená, že krátkodobá obrana má smysl.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 98656.66205288845
-    },
-    {
-      "date": "2026-03-11",
-      "market_summary": "SPY a QQQ vykazují chování charakteristické pro nejistý, volatilní trh bez jasného směru – oba indexy oscilují v rozsahu posledních 5-7 dnů bez trendového rozhodnutí. VIXY skočila prudce (z ~28 na 31+), což signalizuje zvýšenou nejistotu. Fundamentálně: CPI zůstává stabilní (2,4%), ale geopolitické riziko (Iran, Hormuz) a váhavé sentimenty vytváří krátkodobou nejistotu. Výnosová křivka (T10Y2Y +0,57 %) není invertovaná – není tedy signálu ekonomického zpomalení. Portfolio je v hotovosti.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 98541.56042835287
-    },
-    {
-      "date": "2026-03-12",
-      "market_summary": "Trh se nachází v uncertainty a napětí vlivem eskalace na Středním východě (Írán a Hormuzdská úžina). Volatilita (VIXY) vzrostla na 33.32 z průměru ~28 a je druhý den vysoká; SPY klesla včera na 666.05 (nejnižší za 14 dní), QQQ na 597.31. Oil nad $95 vytváří inflační tlak a oslabuje tech sektor. Portfolio je zatím cash (100k), žádné pozice.\"",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 97042.32534421212
-    },
-    {
-      "date": "2026-03-13",
-      "market_summary": "Trh vykazuje signály rizika: Q4 2025 GDP revize dolů na 0.7%, inflace zůstává elevovaná (výnosová křivka stále invertovaná, T10Y2Y = 0.55 %), geopolitické napětí (Iran-Trump) zvyšuje volatilitu (VIXY +22% za 5 dní). SPY a QQQ se nedaří - QQQ od 24.2. oslabil o ~2.3%, včerajší pokles na 593.61 ukazuje tlak na tech. SH/PSQ jsou levné a objem stoupá, což signalizuje zájem o hedging. Účet má $100k hotovosti - žádné existující pozice.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 96495.95687331534
-    },
-    {
-      "date": "2026-03-16",
-      "market_summary": "Trh vykazuje známky zmatku a nejistoty. S&P 500 (SPY) je v poslední týden kolísavý, QQQ (Nasdaq) se podobně potýká s tlaky. Volatilita (VIXY) se zvedla na 31,33 (poměrně vysoká), což signalizuje zvýšenou nervozitu. Výnosová křivka (T10Y2Y = 0,55%) je sice pozitivní, ale jen lehce, což naznačuje nejistotu o budoucím směru ekonomiky. Nedávné zprávy připomínají válku v Iránu, geopolitickou nejistotu a varování od analýtiků o potenciálním sestupném pohybu; Jim Cramer sice varuje před prodejem, ale finanční sektor (200-denní MA) udělal závažný pokles (obě „warning signaly\" v zprávách). Portfolio je zatím v hotovosti (100 000 USD).",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 97467.76426021708
-    },
-    {
-      "date": "2026-03-17",
-      "market_summary": "Trh se nachází v nejisté fázi: SPY a QQQ vykazují volatilitu bez jasného trendu (poslední svíčka SPY +0,3%, QQQ +1,6% od minulého zavření), volatilita (VIXY) nadále zvýšena na 30,86. Makro signály jsou ambivalentní – rozpětí T10Y2Y 0,52% je normální, ale zprávy ukazují stavy nejistoty (Trump/NATO, energetické šoky, Moodys varuje před recesí). SH a PSQ jsou v mírném uptrendu (SH +0,3% včera, PSQ +0,3%), což přímo odráží stav nejistoty. Bez konkrétního pádu podkladových indexů není odůvodnění pro nákup inverzních pozic dostatečné.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 97727.10716106942
-    },
-    {
-      "date": "2026-03-18",
-      "market_summary": "Trh prochází turbulentní fází s výrazným geopolitickým rizikem (razie na energetická zařízení v Íránu, ropa nad $108). Fed včera oznámil zásadní informace: sice ponechal sazby na 3,50%–3,75%, ale signalizuje vyšší inflaci v příští období. QQQ a SPY v posledních 3 dnech padají (SPY -1,7% od 3/16, QQQ -0,98% od 3/16), VIXY se zvýšila na 33,58 a zůstává elevovaná. Portfolio je v hotovosti (100 000 USD).",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 96385.22619654694
-    },
-    {
-      "date": "2026-03-19",
-      "market_summary": "Tržní signály jsou smíšené s nárůstem volatility, ale nejsou dostatečně přesvědčivé pro obrannou pozici. SPY a QQQ mají v posledních dnech tendenci kolísat kolem technických úrovní - SPY od 656 do 686, QQQ od 589 do 610 bez jasného směru. VIXY skokově vzrostl na 35+ (z 28-29), což signalizuje zvýšenou nervozitu, ale index se dosud nepropadl. Makro context ukazuje obavě z inflace, geopolitiku a energií, ale není zde konkrétní propad podkladových indexů - jen technické testy. Portfolio je v hotovosti.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 96141.91010417424
-    },
-    {
-      "date": "2026-03-20",
-      "market_summary": "Trh prochází prudkým prodejům - SPY spadl z 680 na 648 (za 14 dní, -4.7%), QQQ poklesl z 602 na 582 (-3.3%). Hlavními faktory jsou inflační obavy (Brent nad $110, diesel +57% v březnu), riziko zvýšení sazeb Fed (50% šance do října), a geopolitické napětí (válka Iran-USA). VIXY vyskočil na 34.94 (máx. v souboru). T10Y2Y rozpětí je 0.51% (normální, ne inverze), ale 2Y výnos zásadně posunul na 3.88%. Převážně medvědí prostředí s vysokou volatilitou, ale bez jasného dlouhodobého trendového signálu pro jednodenní inverzní ETF - vysoké riziko decay v turbulentním/nejistém trhu.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 94482.40693523712
-    },
-    {
-      "date": "2026-03-23",
-      "market_summary": "Trh zaznamenává výraznou volatilitu a cyklus geopolitického rizika (Iran). SPY klesl z 685 na 655 za 19 dní (od 4.3), QQQ poklesl z 610 na 588 za stejné období. Včerejší (23.3) rally bylo dočasné (Trump pause na útoky), dnes pokles pokračuje. VIXY osciluje vysoko (31-35 za poslední dny), což naznačuje pokračující nejistotu. Bez jasného signálu k \"defence\" pozici nyní není vhodný čas.\"\n<parameter name=\"trades\">[]",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 95486.26793909812
-    },
-    {
-      "date": "2026-03-24",
-      "market_summary": "Trh se v poslední době vyznačuje vysokou volatilitou a stagflačními obavami kvůli eskalaci konfliktu na Blízkém východě (zvýšené ceny ropy). SPY a QQQ v posledních 5 dnech stagnují s drobnými poklesy; VIXY zůstává zvýšená (33,93), signalizující nervozitu trhu. Rozpětí 10Y-2Y (0,49%) zůstává pozitivní, ale Fed údajně neplánuje snižovat sazby. Portfolio je v hotovosti, bez pozic.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 95170.10271727253
-    },
-    {
-      "date": "2026-03-25",
-      "market_summary": "Trh se nachází v turbulentní fázi se smíšenými signály: SPY poklesl z ~680 na ~657 (cca -3% za dva týdny), QQQ oslabil více (~600→588, cca -1,8%), ale poslední dva dny (24.–25. března) ukazují pokus o recovery. Volatilita (VIXY) se pohybuje kolem 31–34, což je mírně zvýšeno, ale není to krach. Výnosová křivka (T10Y2Y=0,49%) je pozitivní, makro nepotřebuje paniku. Zprávy mluví o \"reality gap\" mezi Trump talksy a skutečností, a také o tech investicích vs. broad selloff – nejasno. Účet je v plné hotovosti bez pozic.",
-      "trades": [],
-      "blocked_reasons": [],
-      "portfolio_value": 100000.0,
-      "cash": 100000.0,
-      "positions": [],
-      "benchmark_spy_buy_hold_value": 95685.87455379908
-    },
-    {
-      "date": "2026-03-26",
-      "market_summary": "S&P 500 (SPY) poklesl o 2,3% v posledních 3 obchodních dnech (z 656,65 na 645,11), Nasdaq-100 (QQQ) klesá ještě výrazněji o 1,4% za stejné období (591,14 → 573,68). Volatilita (VIXY) se zvýšila na 35,52, což signalizuje rostoucí nejistotu. Geopolitické napětí (Iran-USA) a varování analytiků na recesi vytváří přesvědčivý medvědí scénář. Portfolio je plně v hotovosti (100k$), připraveno na pozici.",
+      "market_summary": "Trh zažívá výrazný šok kvůli eskalaci konfliktu USA-Írán: S&P 500 klesl o 1,5% (SPY: 696,4 → 680,3), Nasdaq-100 poklesl o ~2% (QQQ: 616,4 → 601,7). VIXY (volatilita) skočila z 25,7 na 29,55, což signalizuje zvýšenou strach. YCC (rozpětí 10Y-2Y) je 0,55% – zdravé, ale geopolitická nejistota je masivní. Portfolio je v hotovosti, bez pozic.",
       "trades": [
-        {
-          "symbol": "SH",
-          "side": "buy",
-          "qty": 130,
-          "fill_price": 38.235,
-          "status": "filled",
-          "reasoning": "S&P 500 se zřítil o 2,3% za 3 dni (656→645), SPY je pod 200-dnem MA, VIXY stoupá na 35,5. Geopolitické riziko (Iran) a OECD varování na 4,2% inflaci vytváří jasný medvědí signál. SH sleduje -1x denní výkonnost S&P 500, ideální pro krátkodobou obrannou pozici. Máme čas ~10 dní na udržení pozice."
-        },
         {
           "symbol": "PSQ",
           "side": "buy",
-          "qty": 145,
-          "fill_price": 32.4,
+          "qty": 130,
+          "fill_price": 31.04,
           "status": "filled",
-          "reasoning": "Nasdaq-100 se zřítil výrazněji než S&P (-1,4% za 3 dni, 591→574). Tech sektor (NFLX price hikes, volatilita) se potýká s více headwindy. PSQ sleduje -1x denní Nasdaq výkonnost. Dvojitá ochrana proti tech/growth poklesu spolu s SH zajišťuje širší hedging v nejistém prostředí."
+          "reasoning": "QQQ poklesl za 14 dní z 616,4 na 601,7 (~-2,4%). Iran war eskaluje (Day 4), Oil +6%, volatilita na 29,55. PSQ (Short QQQ -1x denní) by měl profitovat z poklesu Nasdaq v krátkodobém výhledu. Nákup pod 5k$ limit, pozice pod 10k$ limit. Drží se max ~10 dní kvůli decay."
+        },
+        {
+          "symbol": "SH",
+          "side": "buy",
+          "qty": 110,
+          "fill_price": 36.44,
+          "status": "filled",
+          "reasoning": "S&P 500 klesl z 696,4 na 680,3 za 14 dní (~-2,3%). SH (Short SPY -1x denní) profituje z poklesu širokého trhu. Geopolitické riziko, zvýšená volatilita (VIXY +14,8%), plus zprávy o energetickém šoku – to podporuje krátkodobě bearish pozici. Nákup pod 5k$ limit, pozice pod 10k$ limit."
         }
       ],
       "blocked_reasons": [],
       "portfolio_value": 100000.0,
-      "cash": 90331.45,
+      "cash": 91956.40000000001,
       "positions": [
         {
-          "symbol": "SH",
+          "symbol": "PSQ",
           "qty": 130.0,
-          "avg_entry_price": 38.235,
-          "current_price": 38.235,
-          "market_value": 4970.55,
+          "avg_entry_price": 31.04,
+          "current_price": 31.04,
+          "market_value": 4035.2,
           "unrealized_pl": 0.0,
           "unrealized_plpc": 0.0
         },
         {
-          "symbol": "PSQ",
-          "qty": 145.0,
-          "avg_entry_price": 32.4,
-          "current_price": 32.4,
-          "market_value": 4698.0,
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.44,
+          "market_value": 4008.3999999999996,
           "unrealized_pl": 0.0,
           "unrealized_plpc": 0.0
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 99117.0685510308
+    },
+    {
+      "date": "2026-03-04",
+      "market_summary": "Trh vykazuje znaky uptrend recovery po pádu - SPY a QQQ se zotavují, software rally pokračuje. Zprávy hlásí Iran diplomacii, Bitcoin rally a obecně benignní sentiment. VIXY se mírně snížila z 29.55 na 28.47. Náš portfolio je v malé ztrátě na obou pozicích SH a PSQ, které drží ~2 týdny. Volatilita klesá a sentiment se zlepšuje – to je nepříznivé pro inverse ETF.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 99909.40000000001,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 30.58,
+          "market_value": 3975.3999999999996,
+          "unrealized_pl": -59.80000000000018,
+          "unrealized_plpc": -0.014819587628866038
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.16,
+          "market_value": 3977.5999999999995,
+          "unrealized_pl": -30.800000000000182,
+          "unrealized_plpc": -0.007683863885839748
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 99822.2481241349
+    },
+    {
+      "date": "2026-03-05",
+      "market_summary": "Trh pokračuje v kolísavém prostředí pod tlakem konfliktu v Íránu a růstu cen ropy (WTI na $80). S&P500 a Nasdaq100 jsou pod tlakem, ale bez jasného medvědího trendu. Volatilita (VIXY) se zvýšila na 30.36, výnosová křivka zůstává ploché (T10Y2Y 0.56%), což není inverzní signál pro crash. Portfolio drží 130 PSQ a 110 SH, obě pozice s lehkou ztrátou (-0.48% a -0.18%).",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 99944.75000000001,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 30.67,
+          "market_value": 3987.1000000000004,
+          "unrealized_pl": -48.099999999999454,
+          "unrealized_plpc": -0.011920103092783463
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.375,
+          "market_value": 4001.25,
+          "unrealized_pl": -7.149999999999636,
+          "unrealized_plpc": -0.0017837541163555626
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 99279.52210971077
+    },
+    {
+      "date": "2026-03-06",
+      "market_summary": "Trh v posledních dvou dnech zažívá vážné turbulence: slabá zpráva o zaměstnanosti (-92K payrolls) spustila prudký pokles akcií v pátek (SPY -1.0%, QQQ -1.8%), ekonomické obavy o stagflaci se zvýšily, a volatilita (VIXY) vzrostla na 34.51 (+15% v pátek). Oba inverzní ETF (SH, PSQ) se pohybují blízko vstupních cen; portfolio je nyní v malém zisku (+0.3% denně).",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100058.00000000001,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 31.135,
+          "market_value": 4047.55,
+          "unrealized_pl": 12.350000000000364,
+          "unrealized_plpc": 0.003060567010309434
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.855,
+          "market_value": 4054.0499999999997,
+          "unrealized_pl": 45.65000000000009,
+          "unrealized_plpc": 0.011388583973655386
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 97973.33721862023
+    },
+    {
+      "date": "2026-03-09",
+      "market_summary": "Trh se nachází v signifikantní nejistotě kvůli geopolitickým rizikům (konflikt Iran-USA) a rostoucím cenám ropy, což vyvolalo náznaky volatility. SPY zaznamenal západ ve středu (672,44) a mírný rebound v pátek (678,30), QQQ se pohybuje podobně nestabilně. VIXY skočil na 34,51 v pátek (nejvyšší za poslední období), což signalizuje zvýšenou nejistotu. Výnosová křivka zůstává invertovaná (T10Y2Y = 0,56%), což podporuje opatrný přístup. Náš portfolio drží SH a PSQ obě s negativní/neutrální realizací, obě pozice jsou drženy zhruba 10-14 obchodních dní od vstupu (riziko decay).",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 99976.6,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 30.75,
+          "market_value": 3997.5,
+          "unrealized_pl": -37.69999999999982,
+          "unrealized_plpc": -0.009342783505154606
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.57,
+          "market_value": 4022.7,
+          "unrealized_pl": 14.300000000000182,
+          "unrealized_plpc": 0.003567508232711347
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 98827.12901580824
+    },
+    {
+      "date": "2026-03-10",
+      "market_summary": "Trh dnes volatilní: S&P500 a Nasdaq si sice drží zisky (Trump signalizuje konec konfliktu s Íránem, ropa padá 10%), ale SH a PSQ pozice se pohybují blízko break-even s minimálními zisky/ztrátami. VIXY poslední 2 dny prudce roste (34.51→32.68), signalizuje nervozitu. SPY včera prolomila 100-den průměr (klíčový technický signál k poklesu), ale index se včera stejně vrátil k horní straně. Bez jasného pokynulu pádu v příštích dnech není důvod k dalším nákupům inverzních ETF.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 99983.75000000001,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 30.75,
+          "market_value": 3997.5,
+          "unrealized_pl": -37.69999999999982,
+          "unrealized_plpc": -0.009342783505154606
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.635,
+          "market_value": 4029.85,
+          "unrealized_pl": 21.450000000000273,
+          "unrealized_plpc": 0.005351262349067021
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 98656.66205288845
+    },
+    {
+      "date": "2026-03-11",
+      "market_summary": "S&P 500 (SPY) a Nasdaq-100 (QQQ) vykazují nejistou dynamiku s volatilitou zraženou i v VIXY. Po výrazném růstu z 3/3 do 3/6 (VIX stoupl z 29,55 na 34,51) následoval pokles do 3/11 (31,19). Aktuálně obě pozice (PSQ a SH) jsou staré přibližně 8 obchodních dní, obě drží malé zisky/ztráty. Trh osciluje kolem geopolitických signálů bez jasného trendu poklesu.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 99988.70000000001,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 30.75,
+          "market_value": 3997.5,
+          "unrealized_pl": -37.69999999999982,
+          "unrealized_plpc": -0.009342783505154606
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 36.68,
+          "market_value": 4034.8,
+          "unrealized_pl": 26.400000000000546,
+          "unrealized_plpc": 0.00658616904500553
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 98541.56042835287
+    },
+    {
+      "date": "2026-03-12",
+      "market_summary": "Trh čelí geopolitickému tlaku (napětí v Perském zálivu, ropa nad $95) a nervozitě ohledně inflace a sazeb Fedu. SPY padla z 687 na 666 za posledních dní, QQQ klesla z 616 na 597. Volatilita (VIXY) vzrostla z ~27 na 33, což signalizuje zvýšenou nejistotu. Pozice SH (110 ks) a PSQ (130 ks) vykazují skromné zisky (+2,2% a +0,8%), jsou drženy krátce a dekayní riziko je stále minimální. Zůstanu tedy v hotovosti a pozorně sleduji další vývoj.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100120.5,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 31.29,
+          "market_value": 4067.7,
+          "unrealized_pl": 32.5,
+          "unrealized_plpc": 0.008054123711340289
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 37.24,
+          "market_value": 4096.400000000001,
+          "unrealized_pl": 88.00000000000091,
+          "unrealized_plpc": 0.021953896816685026
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 97042.32534421212
+    },
+    {
+      "date": "2026-03-13",
+      "market_summary": "Trh vykazuje signály opatrnosti: SPY/QQQ v posledních 3 dnech klesají (SPY: 678.3 → 662.3, QQQ: 607.76 → 593.61), VIXY stoupá na 33.92, výnosová křivka je pozitivní (T10Y2Y +0.55%), ale makro situace je nejistá (nižší GDP, inflace, napětí v Íránu). Naše pozice SH a PSQ jsou malé a ziskové (+59.80 na PSQ, +114.40 na SH). Avšak bez jasného důvodu k dalšímu poklesu nejsou nové obchody oprávněné.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100174.20000000001,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 31.5,
+          "market_value": 4095.0,
+          "unrealized_pl": 59.80000000000018,
+          "unrealized_plpc": 0.014819587628865927
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 37.48,
+          "market_value": 4122.799999999999,
+          "unrealized_pl": 114.39999999999964,
+          "unrealized_plpc": 0.028540065861690334
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 96495.95687331534
+    },
+    {
+      "date": "2026-03-16",
+      "market_summary": "Trh vykazuje smíšené signály s prudkou volatilitou související s geopolitickými riziky (válka v Iránu). SPY a QQQ se v poslední týdnu pohybují blízko levelů ze začátku března, s obnoveným selháním finančního sektoru pod 200DMA. VIXY se ustabilizoval na ~31 po nedávném skoku na 34+, což indikuje zvýšenou nejistotu. Výnosová křivka zůstává mírně pozitivní (T10Y2Y +0.55%), ale geopolitické riziko a technické varovné signály zatím zůstávají relevantní.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100085.6,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 31.14,
+          "market_value": 4048.2000000000003,
+          "unrealized_pl": 13.000000000000455,
+          "unrealized_plpc": 0.003221649484536071
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 37.1,
+          "market_value": 4081.0,
+          "unrealized_pl": 72.60000000000036,
+          "unrealized_plpc": 0.018111964873765096
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 97467.76426021708
+    },
+    {
+      "date": "2026-03-17",
+      "market_summary": "Trh vykazuje smíšené signály s volatilitou (VIXY ~30,86). SPY se drží v neutrální zóně (670,75), zatímco QQQ slabší (603,51). Zprávy hlásí riziko recese (Moody's 49% šance) a varovný signál XLF pod 200MA. Naše pozice: SH +61,60 (zisk), PSQ -6,50 (malá ztráta).",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100055.1,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 30.99,
+          "market_value": 4028.7,
+          "unrealized_pl": -6.5,
+          "unrealized_plpc": -0.0016108247422680355
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 37.0,
+          "market_value": 4070.0,
+          "unrealized_pl": 61.600000000000364,
+          "unrealized_plpc": 0.015367727771679496
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 97727.10716106942
+    },
+    {
+      "date": "2026-03-18",
+      "market_summary": "Trh prošel turbulentním dnem: Fed udržel sazby, ale varoval na inflaci a zdražování ropy (Brent +108 USD), což vyvolalo pokles akcií. SPY klesl o 1.3% (661.54) a QQQ o 1.5% (594.82) na sou­čas­ném svíčkovém uzávěru. VIXY se zvedl na 33.58, což signalizuje zvýšenou volatilitu. V naší short pozici máme SH (+121 USD nerealizovaného zisku) a PSQ (+52 USD), obě pozice jsou ziskové a zatím bez signálů k příliš dlouhému držení (decay risk).",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100173.0,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 31.44,
+          "market_value": 4087.2000000000003,
+          "unrealized_pl": 52.000000000000455,
+          "unrealized_plpc": 0.012886597938144506
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 37.54,
+          "market_value": 4129.4,
+          "unrealized_pl": 121.0,
+          "unrealized_plpc": 0.030186608122941827
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 96385.22619654694
+    },
+    {
+      "date": "2026-03-19",
+      "market_summary": "Trh se ocitá v turbulentní fázi: SPY a QQQ prorazily pod 200denní průměr, VIXY vzrostl na 32,57 (býčí divergence volatility), a makro tlaky (inflace ropy, geopolitika) se zesilují. Portfolio je nyní s +$195,70 celkovým ziskem, ale obě pozice byly iniciování v poslední části období s nejistějšími signály (PSQ 3/3, SH 3/3).",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100195.7,
+      "cash": 91956.40000000001,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 130.0,
+          "avg_entry_price": 31.04,
+          "current_price": 31.53,
+          "market_value": 4098.900000000001,
+          "unrealized_pl": 63.70000000000073,
+          "unrealized_plpc": 0.01578608247422686
+        },
+        {
+          "symbol": "SH",
+          "qty": 110.0,
+          "avg_entry_price": 36.44,
+          "current_price": 37.64,
+          "market_value": 4140.4,
+          "unrealized_pl": 132.0,
+          "unrealized_plpc": 0.03293084522502743
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 96141.91010417424
+    },
+    {
+      "date": "2026-03-20",
+      "market_summary": "Trh vykrvácí: S&P 500 a Nasdaq-100 padají na čtyřměsíční minima. S&P 500 je horší v březnu od září 2022, ropa útočí výše $110 na inflační obavy, Fed zvažuje rate hike. Nízké svíčky (SPY na 648,48 z 659,87 včera, QQQ na 582,09 z 593,0) signalizují pokračující pokles. Naše SH (+4,88%) a PSQ (+3,54%) jsou v zisku díky hedgingu, ale obě pozice se blíží k doporučenému 10dennímu limitu.",
+      "trades": [
+        {
+          "symbol": "SH",
+          "side": "buy",
+          "qty": 55,
+          "fill_price": 38.22,
+          "status": "filled",
+          "reasoning": "S&P 500 prorazil podporu, SPY v -1,68% na 648,48. Makro kontext: ropa $110+, Fed zvažuje hike, výnosová křivka pozitivní (T10Y2Y +0,51%). Síla inverzního signálu + podešlá volatilita (VIXY 34,94) oprávňují zvýšení hedgingu. Nový nákup 55 ks pod $5k limit, pozice bude ~$6,3k, tedy bezpečně pod limitem pozice."
+        },
+        {
+          "symbol": "PSQ",
+          "side": "buy",
+          "qty": 50,
+          "fill_price": 32.14,
+          "status": "filled",
+          "reasoning": "QQQ na dvoutýdenním minimu (-1,88% den 644,75 vs 648,48), dlhá držba ~18 dní od vstupu (3.3. vs 20.3.). Tech sector je rozbitý (META, NVDA, TSLA padají). Menší nákup 50 ks na posilnění obranné pozice před dalším poklesem. Celková pozice bude ~$5,8k, přípustně pod limitem."
+        }
+      ],
+      "blocked_reasons": [],
+      "portfolio_value": 100338.8,
+      "cash": 88247.3,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 32.14,
+          "market_value": 5785.2,
+          "unrealized_pl": 143.0,
+          "unrealized_plpc": 0.02534472368934093
+        },
+        {
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 38.22,
+          "market_value": 6306.3,
+          "unrealized_pl": 195.80000000000018,
+          "unrealized_plpc": 0.03204320432043217
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 94482.40693523712
+    },
+    {
+      "date": "2026-03-23",
+      "market_summary": "Trh se po politickém napětí kolem Íránu vrátil do útlumu - SPY/QQQ se stabilizují pod posledními maxima, volatilita (VIXY) zůstává zvýšená (33). S&P 500 padl pod 6500, Nasdaq slábne. Portfolio drží SH (165 ks, +2%) a PSQ (180 ks, +1,3%), obě pozice jsou v mírném plusu po rekentní držbě. Signály nejsou zatím dostatečně přesvědčivé pro další nákup - čekám na jasnější reverzi nebo pokles.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100192.7,
+      "cash": 88247.3,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 31.75,
+          "market_value": 5715.0,
+          "unrealized_pl": 72.80000000000018,
+          "unrealized_plpc": 0.012902768423664446
+        },
+        {
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 37.76,
+          "market_value": 6230.4,
+          "unrealized_pl": 119.89999999999964,
+          "unrealized_plpc": 0.0196219621962197
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 95486.26793909812
+    },
+    {
+      "date": "2026-03-24",
+      "market_summary": "Trh zůstává volatilní v důsledku napětí v Íránu. SPY a QQQ pokračují v nejistém kolísavém chování: SPY od 3/5 až do 3/24 klesla z 681 na 653 (-4.1%), QQQ z 609 na 584 (-4.1%). VIXY osciluje kolem 33 (zvýšená volatilita). Výnosová křivka zůstává jen mírně pozitivní (T10Y2Y +0.49%), což poukazuje spíše na stagnaci než na paniku. Pozice SH a PSQ jsou malé (~5.7k a ~6.3k), oba ETF dosahují malých zisků (0.02%). Bez konkrétního signálu k dalšímu poklesu se držím hotovosti a nechovám žádný obchod.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100267.55,
+      "cash": 88247.3,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 32.01,
+          "market_value": 5761.799999999999,
+          "unrealized_pl": 119.59999999999945,
+          "unrealized_plpc": 0.021197405267448843
+        },
+        {
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 37.93,
+          "market_value": 6258.45,
+          "unrealized_pl": 147.94999999999982,
+          "unrealized_plpc": 0.024212421242124194
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 95170.10271727253
+    },
+    {
+      "date": "2026-03-25",
+      "market_summary": "Trh vykazuje zmatek: SPY od 20.3. propadl z 656 na 648, pak se vrátil na 656; QQQ podobně osciluje (588–607). Volatilita (VIXY) zůstává zvýšená (33), geopolitické starosti (Iran) a slabé auktce státních dluhopisů vítězí nad tech rally. Portfolia držíme obě inverzní ETF pozice s malými zisky.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100142.375,
+      "cash": 88247.3,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 31.64,
+          "market_value": 5695.2,
+          "unrealized_pl": 53.0,
+          "unrealized_plpc": 0.009393498989755722
+        },
+        {
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 37.575,
+          "market_value": 6199.875000000001,
+          "unrealized_pl": 89.37500000000091,
+          "unrealized_plpc": 0.01462646264626466
+        }
+      ],
+      "benchmark_spy_buy_hold_value": 95685.87455379908
+    },
+    {
+      "date": "2026-03-26",
+      "market_summary": "S&P 500 a Nasdaq-100 se v posledních dnech zotavují po prudkém výprodeji 20.3. (SPY -1.8% na 645.11, QQQ -1.5% na 573.68 vs. zadních dat). Geopolitické riziko (Iran - odmítnutí příměří) zůstává, VIXY skočila na 35.52, což signalizuje zvýšenou volatilitu. Pozice SH a PSQ jsou lehce v zisku (+3.2%), zatím ale nejsou staženy do bezpečí. Neexistuje dnes jednoznačný pokynový signál k eskalaci pozic.",
+      "trades": [],
+      "blocked_reasons": [],
+      "portfolio_value": 100388.075,
+      "cash": 88247.3,
+      "positions": [
+        {
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 32.4,
+          "market_value": 5832.0,
+          "unrealized_pl": 189.80000000000018,
+          "unrealized_plpc": 0.03363936053312533
+        },
+        {
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 38.235,
+          "market_value": 6308.775,
+          "unrealized_pl": 198.27499999999964,
+          "unrealized_plpc": 0.0324482448244825
         }
       ],
       "benchmark_spy_buy_hold_value": 93991.40380272454
     },
     {
       "date": "2026-03-27",
-      "market_summary": "Trh výrazně poklesl: SPY -1,75% na 634,04, QQQ -2,91% na 562,50; Nasdaq vstoupil do korekce. Volatilita vzrostla (VIXY +9,7% na 38,26). Inverzní ETF pozice (SH +1,66%, PSQ +1,91%) jsou ziskové, ale blížíme se doporučenému 10-dennímu limitu držení. Zprávy hlásí zhoršení situace kolem Íránu a Fed hike rizika.",
+      "market_summary": "Nasdaq-100 vstoupil do korekčního území (-10%) po páteční prudké výprodeji; index QQQ spadl z 607 na 562 (-7,4% za 14 dní), S&P 500 poklesl o 6,3%. VIXY vylétl na 38,26 (z 30-32 obvyklou hladinu), signalizuje zvýšenou strach. Makro kontext: inverní yield curve (rozpětí 10Y-2Y 0,56%), vzestupy 30letých výnosů blízko 5%, geopolitické riziko Iran/Trump. Aktuální portfolio drží 180x PSQ (+5,3%) a 165x SH (+4,96%), obě pozice v zisku, ale drženy ~10 obchodních dní (blížíme se k upper limitu decay rizika).",
       "trades": [],
-      "blocked_reasons": [
-        "Obchod SH v hodnotě 5053.10 přesahuje limit na jeden obchod (5008.62)."
-      ],
-      "portfolio_value": 100172.45,
-      "cash": 90331.45,
+      "blocked_reasons": [],
+      "portfolio_value": 100604.45000000001,
+      "cash": 88247.3,
       "positions": [
         {
-          "symbol": "SH",
-          "qty": 130.0,
-          "avg_entry_price": 38.235,
-          "current_price": 38.87,
-          "market_value": 5053.099999999999,
-          "unrealized_pl": 82.54999999999927,
-          "unrealized_plpc": 0.016607820060154266
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 33.02,
+          "market_value": 5943.6,
+          "unrealized_pl": 301.40000000000055,
+          "unrealized_plpc": 0.053418879160611166
         },
         {
-          "symbol": "PSQ",
-          "qty": 145.0,
-          "avg_entry_price": 32.4,
-          "current_price": 33.02,
-          "market_value": 4787.900000000001,
-          "unrealized_pl": 89.90000000000055,
-          "unrealized_plpc": 0.019135802469135932
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 38.87,
+          "market_value": 6413.549999999999,
+          "unrealized_pl": 303.0499999999993,
+          "unrealized_plpc": 0.0495949594959495
         }
       ],
       "benchmark_spy_buy_hold_value": 92378.52407663727
     },
     {
       "date": "2026-03-30",
-      "market_summary": "Trh výrazně oslabil v posledních dnech: SPY klesla z ~676 (11.3.) na ~632 (30.3., -6,5%), QQQ padla z ~608 na ~558 (-8,2%). Volatilita (VIXY) stoupla z ~31 na ~38. Geopolitická rizika (Iran, hrozba olejového šoku na $150) a obavy z recese tlačí tržní sentiment dolů. Naše pozice SH (+2,08%) a PSQ (+2,81%) profitují z poklesu, ale vzhledem k 10dennímu doporučenímu držení a již dosažené ziskovosti je čas zvážit částečné uzavření.",
-      "trades": [
-        {
-          "symbol": "SH",
-          "side": "sell",
-          "qty": 65,
-          "fill_price": 39.03,
-          "status": "filled",
-          "realized_pl": 51.67500000000011,
-          "reasoning": "Uzavření poloviny pozice SH. Pozice držena od zač. března (~6-7 obchodních dní), již generuje +2,08% zisk. SPY je pod 200denním MA (bullish signál pro SH), ale bez dalších růstových katalyzátorů; inverzní ETF trpí decay. Redukce rizika a zmapování zisku je nyní vhodné."
-        },
-        {
-          "symbol": "PSQ",
-          "side": "sell",
-          "qty": 72,
-          "fill_price": 33.31,
-          "status": "filled",
-          "realized_pl": 65.52000000000027,
-          "reasoning": "Uzavření ~50% pozice PSQ. Pozice také starší ~6-7 obchodních dní, +2,81% zisk. QQQ klesla -8,2% od začátku března, ale bez nových negativních impulzů (Fed signalizuje zvážlivost, Trump-Iran situace částečně uklidněna). Decay riziko inverzního ETF při delším držení opravňuje zmapování zisku."
-        }
-      ],
+      "market_summary": "SPY a QQQ jsou v hlubokém poklesu (SPY -6,5% od 11.3., QQQ -8,2% za stejné období) se stále rostoucí volatilitou (VIXY +21% od 11.3. na 37.875). Portfolio drží long SH a PSQ s +$683 nerealizovaného zisku (+6,8%). Trh se zpravidla částečně vzpamatovává po prudkých poklesech - bez dalšího silného medvědího signálu by nákup nyní znamenal podchycení pádu a vystavení se decay riziku.",
+      "trades": [],
       "blocked_reasons": [],
-      "portfolio_value": 100235.3,
-      "cash": 95266.72,
+      "portfolio_value": 100683.05,
+      "cash": 88247.3,
       "positions": [
         {
-          "symbol": "SH",
-          "qty": 65.0,
-          "avg_entry_price": 38.235,
-          "current_price": 39.03,
-          "market_value": 2536.9500000000003,
-          "unrealized_pl": 51.67500000000018,
-          "unrealized_plpc": 0.020792467634366485
+          "symbol": "PSQ",
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 33.31,
+          "market_value": 5995.8,
+          "unrealized_pl": 353.60000000000036,
+          "unrealized_plpc": 0.06267058948637061
         },
         {
-          "symbol": "PSQ",
-          "qty": 73.0,
-          "avg_entry_price": 32.4,
-          "current_price": 33.31,
-          "market_value": 2431.63,
-          "unrealized_pl": 66.43000000000029,
-          "unrealized_plpc": 0.028086419753086567
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 39.03,
+          "market_value": 6439.95,
+          "unrealized_pl": 329.4499999999998,
+          "unrealized_plpc": 0.05391539153915392
         }
       ],
       "benchmark_spy_buy_hold_value": 92084.21359364754
     },
     {
       "date": "2026-03-31",
-      "market_summary": "Trh výrazně sílí: QQQ +3.2% poslední den (517 → 577), SPY +2.8% (638 → 650), VIX klesl z 38 na 34. Zprávy o možném konci konfliktu s Íránem a nižších výnosech dluhopisů zvedají sentiment. Naše pozice v SH (-0.82%) a PSQ (-0.68%) jsou lehce ve ztrátě. Výnosová křivka 10Y-2Y normalizuje se na 0.51%, není invertovaná.",
-      "trades": [
-        {
-          "symbol": "SH",
-          "side": "sell",
-          "qty": 65.0,
-          "fill_price": 37.92,
-          "status": "filled",
-          "realized_pl": -20.474999999999852,
-          "reasoning": "Uzavření slabé pozice. Bullish sentiment (nižší geopolitické riziko, nižší výnosy dluhopisů, VIX pokles 38→34, QQQ +3.2%). Pozice SH je v mírné ztrátě (-20.47 USD, -0.82%) a bez jasného důvodu k dalšímu poklesu. Decay riziko inverzního ETF by při pokračujícím růstu trhu byl problém. Držíme cca 2 týdny."
-        },
+      "market_summary": "Trh se včera (31.3.) silně vzepřel s QQQ +3,2% a SPY +1,8% na vůli Trumpa řešit konflikt s Íránem a poklesu výnosů. VIXY se vrátil na ~34, což signalizuje ústup volatility. SH i PSQ drží zmírněné zisky (+2,6% a +2,7%), ale oba ETF jsou nyní dlouhodobě v pozici, kde hrozí decay.",
+      "trades": [],
+      "blocked_reasons": [
+        "Obchod PSQ v hodnotě 5792.40 přesahuje limit na jeden obchod (5014.83).",
+        "Obchod PSQ: 180.0 ks x 32.18 = 5792.40 přesahuje limit na jeden obchod (5014.83) - nezávisle přepočítáno z tržní ceny.",
+        "Obchod SH v hodnotě 6256.80 přesahuje limit na jeden obchod (5014.83).",
+        "Obchod SH: 165.0 ks x 37.92 = 6256.80 přesahuje limit na jeden obchod (5014.83) - nezávisle přepočítáno z tržní ceny."
+      ],
+      "portfolio_value": 100296.5,
+      "cash": 88247.3,
+      "positions": [
         {
           "symbol": "PSQ",
-          "side": "sell",
-          "qty": 73.0,
-          "fill_price": 32.18,
-          "status": "filled",
-          "realized_pl": -16.059999999999917,
-          "reasoning": "Uzavření slabé pozice. Stejné důvody jako SH: bullish sentiment, normalizace výnosové křivky, VIX pokles, Nasdaq zesílil (+3.2% poslední den). Pozice je v mírné ztrátě (-16.06 USD, -0.68%) bez signálu k dalšímu poklesu. Držíme cca 2 týdny."
+          "qty": 180.0,
+          "avg_entry_price": 31.345555555555556,
+          "current_price": 32.18,
+          "market_value": 5792.4,
+          "unrealized_pl": 150.19999999999982,
+          "unrealized_plpc": 0.02662082166530788
+        },
+        {
+          "symbol": "SH",
+          "qty": 165.0,
+          "avg_entry_price": 37.03333333333333,
+          "current_price": 37.92,
+          "market_value": 6256.8,
+          "unrealized_pl": 146.30000000000018,
+          "unrealized_plpc": 0.023942394239424125
         }
       ],
-      "blocked_reasons": [],
-      "portfolio_value": 100080.66,
-      "cash": 100080.66,
-      "positions": [],
       "benchmark_spy_buy_hold_value": 94721.35207984263
     }
   ]
