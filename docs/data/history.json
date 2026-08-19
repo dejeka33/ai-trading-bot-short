@@ -39,6 +39,19 @@
       "blocked_reasons": [],
       "spy_price": 767.365,
       "realized_pl_cum": 0.0
+    },
+    {
+      "date": "2026-08-19",
+      "portfolio_value": 100000.0,
+      "cash": 100000.0,
+      "buying_power": 400000.0,
+      "positions": [],
+      "market_summary": "Trh v poslední fázi rally – SPY vzrostl z 768.64 (6.8.) na 769.09 (19.8.), QQQ podobně ze 714.7 na 716.03. Volatilita (VIXY) poklesla z ~19.5 na 18.31. Portfolio je prázdné (100% cash). Údaje naznačují pokračující stabilitu bez jasných signálů k poklesu.",
+      "trades": [],
+      "trade_count": 0,
+      "blocked_reasons": [],
+      "spy_price": 769.09,
+      "realized_pl_cum": 0.0
     }
   ]
 }
