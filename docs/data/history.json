@@ -52,6 +52,19 @@
       "blocked_reasons": [],
       "spy_price": 769.09,
       "realized_pl_cum": 0.0
+    },
+    {
+      "date": "2026-08-20",
+      "portfolio_value": 100000.0,
+      "cash": 100000.0,
+      "buying_power": 400000.0,
+      "positions": [],
+      "market_summary": "SPY a QQQ zaznamenaly výrazný pokles v posledních dvou obchodních dnech (SPY -2.6% od 20.8., QQQ -2.3% za stejné období). Volatilita zůstává nízká (VIXY ~18.5), ale dlouhodobé výnosy (10Y 4.65%) rostou a yield curve je slabě pozitivní (T10Y2Y 0.5%). Portfolio je v hotovosti, bez pozic.",
+      "trades": [],
+      "trade_count": 0,
+      "blocked_reasons": [],
+      "spy_price": 762.62,
+      "realized_pl_cum": 0.0
     }
   ]
 }
